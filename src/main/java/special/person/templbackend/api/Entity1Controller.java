@@ -8,7 +8,7 @@ import special.person.templbackend.service.Entity2Service;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping("/api/")
+@RequestMapping("/api/entity1")
 public class Entity1Controller {
 
     private ModelMapper modelMapper;

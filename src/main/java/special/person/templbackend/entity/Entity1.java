@@ -1,4 +1,4 @@
-package com.example.testexam.entity;
+package special.person.templbackend.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
