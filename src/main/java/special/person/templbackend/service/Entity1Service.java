@@ -5,5 +5,5 @@ import org.springframework.stereotype.Service;
 
 @AllArgsConstructor
 @Service
-public class TestEntity2Service {
+public class Entity1Service {
 }
