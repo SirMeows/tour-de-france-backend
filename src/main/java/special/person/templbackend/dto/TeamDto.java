@@ -5,9 +5,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
-public class Entity2Response {
+@NoArgsConstructor
+@AllArgsConstructor
+public class TeamDto {
+
+    private Long id;
+
+    private String country;
 }
