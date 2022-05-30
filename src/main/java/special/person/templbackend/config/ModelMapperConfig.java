@@ -17,9 +17,9 @@ public class ModelMapperConfig {
         return new ModelMapper();
     }
 
-    public static final Type LIST_TYPE_TEAM_DTO = new TypeToken<Set<TeamDto>>() {
+    public static final Type SET_TYPE_TEAM_DTO = new TypeToken<Set<TeamDto>>() {
     }.getType();
 
-    public static final Type LIST_TYPE_CYCLIST_DTO = new TypeToken<Set<CyclistDto>>() {
+    public static final Type SET_TYPE_CYCLIST_DTO = new TypeToken<Set<CyclistDto>>() {
     }.getType();
 }

@@ -18,5 +18,5 @@ public class Team {
     @Column(name = "team_id")
     private Long id;
 
-    private String country;
+    private String name;
 }

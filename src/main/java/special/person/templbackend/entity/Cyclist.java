@@ -21,7 +21,7 @@ public class Cyclist {
 
     private String lastName;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "team_id")
     private Team team;
 }
