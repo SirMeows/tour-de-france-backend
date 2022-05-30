@@ -4,10 +4,19 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import special.person.templbackend.entity.Team;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class Entity2Request {
+public class CyclistDto {
+
+    private Long id;
+
+    private String firstName;
+
+    private String lastName;
+
+    private Team team;
 }
