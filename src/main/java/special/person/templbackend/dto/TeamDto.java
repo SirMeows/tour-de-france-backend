@@ -13,5 +13,5 @@ public class TeamDto {
 
     private Long id;
 
-    private String country;
+    private String name;
 }
