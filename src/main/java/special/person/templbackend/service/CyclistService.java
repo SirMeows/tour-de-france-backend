@@ -27,8 +27,7 @@ public class CyclistService {
         return cRepository.save(cyclist);
     }
 
-    public Cyclist editCyclist(Long id, Cyclist cyclist) {
-        cyclist.setId(id);
+    public Cyclist editCyclist(Cyclist cyclist) {
         return cRepository.save(cyclist);
     }
 

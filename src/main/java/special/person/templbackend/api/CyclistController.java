@@ -11,6 +11,7 @@ import static special.person.templbackend.config.ModelMapperConfig.SET_TYPE_CYCL
 
 @AllArgsConstructor
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/api/cyclists")
 public class CyclistController {
 
@@ -18,7 +19,7 @@ public class CyclistController {
 
     private CyclistService cService;
 
-    @GetMapping
+    @GetMapping("/")
     Set<CyclistDto> getCyclists() {
         var cyclists = cService.getCyclists();
         Set<CyclistDto> cyclistDtos = mm.map(cyclists, SET_TYPE_CYCLIST_DTO);
@@ -37,10 +38,10 @@ public class CyclistController {
         return mm.map(cyclists, SET_TYPE_CYCLIST_DTO);
     }
 
-    @PutMapping("/{id}")
-    CyclistDto editCyclist(@RequestBody CyclistDto body, @PathVariable Long id) {
+    @PostMapping("/edit")
+    CyclistDto editCyclist(@RequestBody CyclistDto body) {
         var cyclist = mm.map(body, Cyclist.class);
-        var cyclistEdited = cService.editCyclist(id, cyclist);
+        var cyclistEdited = cService.editCyclist(cyclist);
         return mm.map(cyclistEdited, CyclistDto.class);
     }
 
