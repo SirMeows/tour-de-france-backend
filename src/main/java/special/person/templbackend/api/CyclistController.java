@@ -20,20 +20,20 @@ public class CyclistController {
     private CyclistService cService;
 
     @GetMapping("/")
-    Set<CyclistDto> getCyclists() {
+    public Set<CyclistDto> getCyclists() {
         var cyclists = cService.getCyclists();
         Set<CyclistDto> cyclistDtos = mm.map(cyclists, SET_TYPE_CYCLIST_DTO);
         return cyclistDtos;
     }
 
     @GetMapping("/{id}")
-    CyclistDto getCyclistById(@PathVariable Long id) {
+    public CyclistDto getCyclistById(@PathVariable Long id) {
         var cyclist = cService.getCyclistById(id);
         return mm.map(cyclist, CyclistDto.class);
     }
 
     @GetMapping("/{searchTerm}/name")
-    Set<CyclistDto> getCyclistsBySearchTerm(@PathVariable String searchTerm) {
+    public Set<CyclistDto> getCyclistsBySearchTerm(@PathVariable String searchTerm) {
         var cyclists = cService.getCyclistsByName(searchTerm);
         return mm.map(cyclists, SET_TYPE_CYCLIST_DTO);
     }
