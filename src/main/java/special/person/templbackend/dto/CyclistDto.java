@@ -18,5 +18,5 @@ public class CyclistDto {
 
     private String lastName;
 
-    private Team team;
+    private Long teamId;
 }

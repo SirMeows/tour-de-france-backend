@@ -37,13 +37,6 @@ public class CyclistController {
         return mm.map(cyclists, SET_TYPE_CYCLIST_DTO);
     }
 
-    @PostMapping
-    CyclistDto addCyclist(@RequestBody CyclistDto body) {
-        var newCyclist = mm.map(body, Cyclist.class);
-        var savedCyclist = cService.addCyclist(newCyclist);
-        return mm.map(savedCyclist, CyclistDto.class);
-    }
-
     @PutMapping("/{id}")
     CyclistDto editCyclist(@RequestBody CyclistDto body, @PathVariable Long id) {
         var cyclist = mm.map(body, Cyclist.class);
