@@ -44,5 +44,4 @@ public class TeamController {
         var savedCyclist = cService.addCyclist(newCyclist);
         return mm.map(savedCyclist, CyclistDto.class);
     }
-
 }
