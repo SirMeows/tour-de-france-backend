@@ -14,6 +14,7 @@ import static special.person.templbackend.config.ModelMapperConfig.SET_TYPE_TEAM
 
 @AllArgsConstructor
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/api/teams")
 public class TeamController {
 
